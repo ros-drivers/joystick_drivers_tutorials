@@ -1,0 +1,11 @@
+<launch>
+
+ <!-- Turtlesim Node-->
+  <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+
+ <!-- Axes -->
+  <param name="scale_linear" value="2" type="double"/>
+  <param name="scale_angular" value="2" type="double"/>
+
+  <node pkg="turtle_teleop" type="turtle_teleop_key" name="teleop" output="screen"/>
+</launch>

@@ -1,0 +1,23 @@
+<package>
+  <description brief="turtle_teleop">
+
+     turtle_teleop is a simple package to demonstrate how to write a teleoperation node in ROS using the turtlesim.
+
+  </description>
+  <author>Melonee Wise</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/turtle_teleop</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="turtlesim"/>
+  <depend package="ps3joy"/>
+  <depend package="joy"/>
+  <depend package="wiimote"/>
+  <depend package="spacenav_node"/>
+  <platform os="ubuntu" version="9.04"/>
+  <platform os="ubuntu" version="9.10"/>
+  <platform os="ubuntu" version="10.04"/>
+</package>
+
+
