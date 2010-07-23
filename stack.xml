@@ -1,0 +1,11 @@
+<stack>
+  <description brief="Tutorials for the joystick_drivers stack.">
+    This stack contains the turtle_teleop package, which contains tutorials
+    for the joystick_drivers stack.
+  </description>
+  <author>Maintained by Blaise Gassend</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/joystick_drivers_tutorials</url>
+  <depend stack="ros" />
+</stack>
