@@ -1,4 +1,4 @@
-<!-- %Tag(FULL)-->
+<!-- %Tag(FULL)%-->
 <launch>
 
  <!-- Turtlesim Node-->
@@ -20,4 +20,4 @@
 
   <node pkg="turtle_teleop" type="turtle_teleop_joy" name="teleop"/>
 </launch>
-<!-- %EndTag(FULL)-->
+<!-- %EndTag(FULL)%-->
