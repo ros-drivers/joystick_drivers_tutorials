@@ -1,7 +1,10 @@
+// %Tag(FULL)%
+// %Tag(INCLUDE)%
 #include <ros/ros.h>
 #include <turtlesim/Velocity.h>
 #include <joy/Joy.h>
-
+// %EndTag(INCLUDE)%
+// %Tag(CLASSDEF)%
 class TeleopTurtle
 {
 public:
@@ -18,7 +21,8 @@ private:
   ros::Subscriber joy_sub_;
   
 };
-
+// %EndTag(CLASSDEF)%
+// %Tag(PARAMS)%
 TeleopTurtle::TeleopTurtle():
   linear_(1),
   angular_(2)
@@ -28,11 +32,15 @@ TeleopTurtle::TeleopTurtle():
   nh_.param("axis_angular", angular_, angular_);
   nh_.param("scale_angular", a_scale_, a_scale_);
   nh_.param("scale_linear", l_scale_, l_scale_);
-
+// %EndTag(PARAMS)%
+// %Tag(PUB)%
   vel_pub_ = nh_.advertise<turtlesim::Velocity>("turtle1/command_velocity", 1);
+// %EndTag(PUB)%
+// %Tag(SUB)%
   joy_sub_ = nh_.subscribe<joy::Joy>("joy", 10, &TeleopTurtle::joyCallback, this);
+// %EndTag(SUB)%
 }
-
+// %Tag(CALLBACK)%
 void TeleopTurtle::joyCallback(const joy::Joy::ConstPtr& joy)
 {
   turtlesim::Velocity vel;
@@ -40,7 +48,8 @@ void TeleopTurtle::joyCallback(const joy::Joy::ConstPtr& joy)
   vel.linear = l_scale_*joy->axes[linear_];
   vel_pub_.publish(vel);
 }
-
+// %EndTag(CALLBACK)%
+// %Tag(MAIN)%
 int main(int argc, char** argv)
 {
   ros::init(argc, argv, "teleop_turtle");
@@ -48,4 +57,5 @@ int main(int argc, char** argv)
 
   ros::spin();
 }
-
+// %EndTag(MAIN)%
+// %EndTag(FULL)%
