@@ -3,13 +3,13 @@
     This stack contains the turtle_teleop package, which contains tutorials
     for the joystick_drivers stack.
   </description>
-  <author>Maintained by Blaise Gassend</author>
+  <author>Melonee Wise</author>
   <license>BSD</license>  
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/joystick_drivers_tutorials</url>
   <depend stack="joystick_drivers" /> <!-- joy, spacenav_node, ps3joy, wiimote -->
   <depend stack="ros" />
-  <depend stack="ros_comm" /> <!-- rospy, roscpp -->
+  <depend stack="ros_comm" /> <!-- joy, turtlesim, rospy, roscpp, wiimote -->
   <depend stack="ros_tutorials" /> <!-- turtlesim -->
 
 </stack>
