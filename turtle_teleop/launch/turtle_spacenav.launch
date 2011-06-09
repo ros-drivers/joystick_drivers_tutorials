@@ -8,7 +8,7 @@
  <!-- spacenav node -->
   <node respawn="true" pkg="spacenav_node"
         type="spacenav_node" name="turtle_spacenav" >
-    <remap from="turtle_spacenav/joy" to="joy" />
+    <remap from="spacenav/joy" to="joy" />
   </node>
 
  <!-- Axes -->
