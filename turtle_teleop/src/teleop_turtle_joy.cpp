@@ -2,7 +2,7 @@
 // %Tag(INCLUDE)%
 #include <ros/ros.h>
 #include <turtlesim/Velocity.h>
-#include <joy/Joy.h>
+#include <sensor_msgs/Joy.h>
 // %EndTag(INCLUDE)%
 // %Tag(CLASSDEF)%
 class TeleopTurtle
@@ -11,7 +11,7 @@ public:
   TeleopTurtle();
 
 private:
-  void joyCallback(const joy::Joy::ConstPtr& joy);
+  void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
   
   ros::NodeHandle nh_;
 
@@ -37,11 +37,11 @@ TeleopTurtle::TeleopTurtle():
   vel_pub_ = nh_.advertise<turtlesim::Velocity>("turtle1/command_velocity", 1);
 // %EndTag(PUB)%
 // %Tag(SUB)%
-  joy_sub_ = nh_.subscribe<joy::Joy>("joy", 10, &TeleopTurtle::joyCallback, this);
+  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopTurtle::joyCallback, this);
 // %EndTag(SUB)%
 }
 // %Tag(CALLBACK)%
-void TeleopTurtle::joyCallback(const joy::Joy::ConstPtr& joy)
+void TeleopTurtle::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
   turtlesim::Velocity vel;
   vel.angular = a_scale_*joy->axes[angular_];

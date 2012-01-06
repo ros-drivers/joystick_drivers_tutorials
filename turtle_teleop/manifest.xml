@@ -15,6 +15,7 @@
   <depend package="joy"/>
   <depend package="wiimote"/>
   <depend package="spacenav_node"/>
+  <depend package="sensor_msgs"/>
   <platform os="ubuntu" version="9.04"/>
   <platform os="ubuntu" version="9.10"/>
   <platform os="ubuntu" version="10.04"/>
